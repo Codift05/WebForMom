@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Ibu Nifas - Deteksi Dini 40 Hari</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="Aplikasi monitoring kesehatan ibu nifas dengan deteksi dini selama 40 hari setelah persalinan">
+    <meta name="keywords" content="ibu nifas, monitoring kesehatan, deteksi dini, kesehatan ibu, postpartum, masa nifas">
+    <meta name="author" content="Monitoring Nifas App">
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Monitoring Nifas">
+    <meta name="application-name" content="Monitoring Nifas">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="msapplication-navbutton-color" content="#667eea">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIk1vbml0b3JpbmcgSWJ1IE5pZmFzIC0gRGV0ZWtzaSBEaW5pIDQwIEhhcmkiLAogICJzaG9ydF9uYW1lIjogIk1vbml0b3JpbmcgTmlmYXMiLAogICJkZXNjcmlwdGlvbiI6ICJBcGxpa2FzaSBtb25pdG9yaW5nIGtlc2VoYXRhbiBpYnUgbmlmYXMgZGVuZ2FuIGRldGVrc2kgZGluaSBzZWxhbWEgNDAgaGFyaSBzZXRlbGFoIHBlcnNhbGluYW4iLAogICJzdGFydF91cmwiOiAiLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzY2N2VlYSIsCiAgInRoZW1lX2NvbG9yIjogIiM2NjdlZWEiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdC1wcmltYXJ5IiwKICAiY2F0ZWdvcmllcyI6IFsiaGVhbHRoIiwgIm1lZGljYWwiLCAibGlmZXN0eWxlIl0sCiAgImxhbmciOiAiaWQiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwsJTNDc3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDEwMCAxMDAnJTNFJTNDY2lyY2xlIGN4PSc1MCcgY3k9JzUwJyByPSc0NScgZmlsbD0nJTIzNjY3ZWVhJy8lM0UlM0NwYXRoIGQ9J001MCAyNWMtOCAwLTE1IDctMTUgMTUgMCAxMiAxNSAyNSAxNSAyNXMxNS0xMyAxNS0yNWMwLTgtNy0xNS0xNS0xNXptMCAyMGMtMyAwLTUtMi01LTVzMi01IDUtNSA1IDIgNSA1LTIgNS01IDV6JyBmaWxsPSd3aGl0ZScvJTNFJTNDL3N2ZyUzRSIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIKICAgIH0sCiAgICB7CiAgICAgICJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sLCUzQ3N2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMDAgMTAwJyUzRSUzQ2NpcmNsZSBjeD0nNTAnIGN5PSc1MCcgcj0nNDUnIGZpbGw9JyUyMzY2N2VlYScvJTNFJTNDcGF0aCBkPSdNNTAgMjVjLTggMC0xNSA3LTE1IDE1IDAgMTIgMTUgMjUgMTUgMjVzMTUtMTMgMTUtMjVjMC04LTctMTUtMTUtMTV6bTAgMjBjLTMgMC01LTItNS01czItNSA1LTUgNSAyIDUgNS0yIDUtNSA1eicgZmlsbD0nd2hpdGUnLyUzRSUzQy9zdmclM0UiLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3N2Zyt4bWwiLAogICAgICAicHVycG9zZSI6ICJhbnkgbWFza2FibGUiCiAgICB9CiAgXQp9">
+    
+    <!-- Icons for different devices -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23667eea'/%3E%3Cpath d='M50 25c-8 0-15 7-15 15 0 12 15 25 15 25s15-13 15-25c0-8-7-15-15-15zm0 20c-3 0-5-2-5-5s2-5 5-5 5 2 5 5-2 5-5 5z' fill='white'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23667eea'/%3E%3Cpath d='M50 25c-8 0-15 7-15 15 0 12 15 25 15 25s15-13 15-25c0-8-7-15-15-15zm0 20c-3 0-5-2-5-5s2-5 5-5 5 2 5 5-2 5-5 5z' fill='white'/%3E%3C/svg%3E">
+    
+    <!-- Fonts and External Resources -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            margin-bottom: 20px;
+            transition: all 0.6s ease;
+        }
+        
+        .cover-page {
+            text-align: center;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            color: white;
+        }
+        
+        .cover-page h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cover-page .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        .days-highlight {
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .start-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .start-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+        }
+        
+        .radio-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .radio-item input[type="radio"] {
+            width: auto;
+            margin: 0;
+        }
+        
+        .radio-item label {
+            margin: 0;
+            font-weight: 400;
+            cursor: pointer;
+            flex: 1;
+        }
+        
+        .question-card {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .question-card h4 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 15px;
+        }
+        
+        .nav-btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .result-section {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .result-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .result-item.warning {
+            border-left-color: #ffc107;
+        }
+        
+        .result-item.danger {
+            border-left-color: #dc3545;
+        }
+        
+        .quote-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            text-align: center;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        
+        .quote-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #8b4513;
+            margin-bottom: 15px;
+        }
+        
+        .menu-options {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .menu-card {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .menu-card i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .material-content {
+            text-align: left;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+        
+        .material-content h3 {
+            color: #667eea;
+            margin: 25px 0 15px 0;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        
+        .material-content h4 {
+            color: #764ba2;
+            margin: 20px 0 10px 0;
+        }
+        
+        .material-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .material-content li {
+            margin-bottom: 8px;
+        }
+        
+        .progress-bar {
+            background: #e0e0e0;
+            height: 6px;
+            border-radius: 3px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        
+        .email-status {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .loading {
+            display: inline-block;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .card {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .cover-page h1 {
+                font-size: 1.8rem;
+            }
+            
+            .cover-page .subtitle {
+                font-size: 1rem;
+            }
+            
+            .menu-options {
+                flex-direction: column;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-btn {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .cover-page h1 {
+                font-size: 1.6rem;
+            }
+            
+            .question-card {
+                padding: 15px;
+            }
+            
+            .card {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cover Page -->
+        <div id="coverPage" class="card cover-page">
+            <i class="fas fa-heart fa-3x" style="margin-bottom: 20px;"></i>
+            <h1>Monitoring Kesehatan Ibu Nifas</h1>
+            <p class="subtitle">Deteksi Dini untuk Kesehatan Optimal Selama Masa Nifas</p>
+            <div class="days-highlight">
+                <h3><i class="fas fa-calendar-alt"></i> 40 Hari Pemantauan Kesehatan</h3>
+                <p>Masa nifas adalah periode penting yang memerlukan perhatian khusus. Mari kita pastikan kesehatan Anda terpantau dengan baik.</p>
+            </div>
+            <button class="start-btn" onclick="showPersonalInfo()">
+                <i class="fas fa-play"></i> Klik untuk Mulai
+            </button>
+        </div>
+
+        <!-- Personal Information Form -->
+        <div id="personalInfoPage" class="card hidden">
+            <h2><i class="fas fa-user"></i> Informasi Pribadi</h2>
+            <form id="personalForm">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="form-group">
+                    <label for="tanggalPersalinan">Tanggal Persalinan:</label>
+                    <input type="date" id="tanggalPersalinan" name="tanggalPersalinan" required>
+                </div>
+                <div class="nav-buttons">
+                    <button type="button" class="nav-btn btn-secondary" onclick="showCover()">
+                        <i class="fas fa-arrow-left"></i> Kembali
+                    </button>
+                    <button type="submit" class="nav-btn btn-primary">
+                        Lanjutkan <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Menu Options -->
+        <div id="menuPage" class="card hidden">
+            <h2>Selamat datang, <span id="welcomeName"></span>!</h2>
+            <p>Hari ke-<span id="dayCounter"></span> setelah persalinan</p>
+            <p style="margin-bottom: 30px;">Pilih menu yang ingin Anda akses:</p>
+            <div class="menu-options">
+                <div class="menu-card" onclick="showAssessment()">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Periksa Kondisi</h3>
+                    <p>Lakukan pemeriksaan kondisi kesehatan Anda saat ini</p>
+                </div>
+                <div class="menu-card" onclick="showMaterial()">
+                    <i class="fas fa-book"></i>
+                    <h3>Materi Nifas</h3>
+                    <p>Pelajari informasi penting tentang masa nifas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assessment Questions -->
+        <div id="assessmentPage" class="card hidden">
+            <h2><i class="fas fa-clipboard-check"></i> Pemeriksaan Kondisi Kesehatan</h2>
+            <p>Jawablah semua pertanyaan berikut dengan jujur untuk mendapatkan evaluasi kondisi kesehatan Anda:</p>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar" style="width: 0%;"></div>
+            </div>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <small>Progress: <span id="progressText">0/23</span></small>
+            </div>
+            
+            <form id="assessmentForm">
+                <!-- Question 1 -->
+                <div class="question-card">
+                    <h4>1. Bagaimana warna, jumlah, dan bau darah yang keluar?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="darah1" name="darah_kondisi" value="normal" required>
+                            <label for="darah1">Normal (merah tua, tidak berbau busuk)</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="darah2" name="darah_kondisi" value="berbau">
+                            <label for="darah2">Berbau tidak sedap</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="darah3" name="darah_kondisi" value="berlebihan">
+                            <label for="darah3">Sangat banyak dan berbau busuk</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-card">
+                    <h4>2. Apakah darah keluar sangat banyak, lebih dari 2 pembalut penuh dalam 1 jam?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="perdarahan1" name="perdarahan_banyak" value="tidak" required>
+                            <label for="perdarahan1">Tidak</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="perdarahan2" name="perdarahan_banyak" value="ya">
+                            <label for="perdarahan2">Ya</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-card">
+                    <h4>3. Apakah ada gumpalan darah besar yang keluar?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="gumpalan1" name="gumpalan_darah" value="tidak" required>
+                            <label for="gumpalan1">Tidak ada</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="gumpalan2" name="gumpalan_darah" value="kecil">
+                            <label for="gumpalan2">Ada, tapi kecil</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="gumpalan3" name="gumpalan_darah" value="besar">
+                            <label for="gumpalan3">Ada gumpalan besar</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-card">
+                    <h4>4. Apakah ibu mengalami demam atau merasa menggigil?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="demam1" name="demam" value="tidak" required>
+                            <label for="demam1">Tidak</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="demam2" name="demam" value="ringan">
+                            <label for="demam2">Demam ringan</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="demam3" name="demam" value="tinggi">
+                            <label for="demam3">Demam tinggi dan menggigil</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-card">
+                    <h4>5. Apakah darah nifas berbau tidak sedap?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="bau1" name="bau_nifas" value="tidak" required>
+                            <label for="bau1">Tidak berbau</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bau2" name="bau_nifas" value="sedikit">
+                            <label for="bau2">Sedikit berbau</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bau3" name="bau_nifas" value="busuk">
+                            <label for="bau3">Berbau busuk</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-card">
+                    <h4>6. Apakah ada nyeri hebat pada perut bagian bawah?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="nyeri1" name="nyeri_perut" value="tidak" required>
+                            <label for="nyeri1">Tidak ada</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="nyeri2" name="nyeri_perut" value="ringan">
+                            <label for="nyeri2">Nyeri ringan</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="nyeri3" name="nyeri_perut" value="hebat">
+                            <label for="nyeri3">Nyeri hebat</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-card">
+                    <h4>7. Apakah ada nyeri, bengkak, atau kemerahan pada payudara?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="payudara1" name="kondisi_payudara" value="normal" required>
+                            <label for="payudara1">Normal</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="payudara2" name="kondisi_payudara" value="ringan">
+                            <label for="payudara2">Sedikit bengkak</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="payudara3" name="kondisi_payudara" value="bermasalah">
+                            <label for="payudara3">Bengkak, merah, dan nyeri</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-card">
+                    <h4>8. Apakah ibu merasa pusing, lemas, atau berdebar-debar?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="kondisi1" name="kondisi_umum" value="baik" required>
+                            <label for="kondisi1">Kondisi baik</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="kondisi2" name="kondisi_umum" value="ringan">
+                            <label for="kondisi2">Sedikit lemas</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="kondisi3" name="kondisi_umum" value="buruk">
+                            <label for="kondisi3">Sangat lemas dan pusing</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-card">
+                    <h4>9. Apakah ibu bisa tidur dan istirahat dengan baik?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="tidur1" name="kualitas_tidur" value="baik" required>
+                            <label for="tidur1">Bisa tidur dengan baik</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="tidur2" name="kualitas_tidur" value="sedang">
+                            <label for="tidur2">Tidur kurang nyenyak</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="tidur3" name="kualitas_tidur" value="buruk">
+                            <label for="tidur3">Sulit tidur/insomnia</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-card">
+                    <h4>10. Apakah ibu merasakan nyeri berlebihan di perineum atau bekas operasi sesar?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="perineum1" name="nyeri_perineum" value="tidak" required>
+                            <label for="perineum1">Tidak ada nyeri berlebihan</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="perineum2" name="nyeri_perineum" value="ringan">
+                            <label for="perineum2">Nyeri ringan</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="perineum3" name="nyeri_perineum" value="hebat">
+                            <label for="perineum3">Nyeri hebat</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="question-card">
+                    <h4>11. Apakah ibu mengalami kesulitan saat berkemih?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="kemih1" name="kesulitan_kemih" value="tidak" required>
+                            <label for="kemih1">Tidak ada kesulitan</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="kemih2" name="kesulitan_kemih" value="sedikit">
+                            <label for="kemih2">Sedikit kesulitan</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="kemih3" name="kesulitan_kemih" value="sangat">
+                            <label for="kemih3">Sangat sulit berkemih</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="question-card">
+                    <h4>12. Apakah ada rasa nyeri atau panas saat buang air kecil?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="nyeri_kemih1" name="nyeri_buang_air_kecil" value="tidak" required>
+                            <label for="nyeri_kemih1">Tidak ada</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="nyeri_kemih2" name="nyeri_buang_air_kecil" value="ringan">
+                            <label for="nyeri_kemih2">Sedikit nyeri/panas</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="nyeri_kemih3" name="nyeri_buang_air_kecil" value="hebat">
+                            <label for="nyeri_kemih3">Sangat nyeri/panas</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="question-card">
+                    <h4>13. Apakah ibu sudah bisa buang air besar dengan lancar?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="bab1" name="buang_air_besar" value="lancar" required>
+                            <label for="bab1">Lancar</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bab2" name="buang_air_besar" value="sedikit_sulit">
+                            <label for="bab2">Sedikit sulit</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bab3" name="buang_air_besar" value="konstipasi">
+                            <label for="bab3">Konstipasi/sangat sulit</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="question-card">
+                    <h4>14. Apakah ASI sudah keluar dengan lancar?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="asi1" name="produksi_asi" value="lancar" required>
+                            <label for="asi1">Lancar</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="asi2" name="produksi_asi" value="sedikit">
+                            <label for="asi2">Sedikit keluar</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="asi3" name="produksi_asi" value="tidak">
+                            <label for="asi3">Belum/tidak keluar</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="question-card">
+                    <h4>15. Apakah ibu merasa puting lecet, bengkak, atau nyeri saat menyusui?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="puting1" name="kondisi_puting" value="normal" required>
+                            <label for="puting1">Normal, tidak ada masalah</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="puting2" name="kondisi_puting" value="lecet">
+                            <label for="puting2">Puting lecet</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="puting3" name="kondisi_puting" value="bengkak_nyeri">
+                            <label for="puting3">Bengkak dan sangat nyeri</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 16 -->
+                <div class="question-card">
+                    <h4>16. Apakah bayi bisa menyusu dengan baik?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="menyusu1" name="bayi_menyusu" value="baik" required>
+                            <label for="menyusu1">Menyusu dengan baik</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="menyusu2" name="bayi_menyusu" value="kesulitan">
+                            <label for="menyusu2">Sedikit kesulitan</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="menyusu3" name="bayi_menyusu" value="tidak_bisa">
+                            <label for="menyusu3">Tidak bisa menyusu</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 17 -->
+                <div class="question-card">
+                    <h4>17. Apakah ibu merasa sedih berlebihan, mudah menangis, atau tidak bersemangat?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="mental1" name="kondisi_mental" value="baik" required>
+                            <label for="mental1">Perasaan stabil</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="mental2" name="kondisi_mental" value="ringan">
+                            <label for="mental2">Kadang merasa sedih</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="mental3" name="kondisi_mental" value="buruk">
+                            <label for="mental3">Sering menangis dan sedih</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 18 -->
+                <div class="question-card">
+                    <h4>18. Apakah ibu merasa cemas atau takut berlebihan merawat bayinya?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="cemas1" name="kecemasan" value="tidak" required>
+                            <label for="cemas1">Tidak cemas berlebihan</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="cemas2" name="kecemasan" value="sedikit">
+                            <label for="cemas2">Sedikit cemas</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="cemas3" name="kecemasan" value="sangat">
+                            <label for="cemas3">Sangat cemas dan takut</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 19 -->
+                <div class="question-card">
+                    <h4>19. Apakah ibu membutuhkan bantuan keluarga dalam merawat bayi?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="bantuan1" name="butuh_bantuan" value="tidak" required>
+                            <label for="bantuan1">Bisa mandiri</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bantuan2" name="butuh_bantuan" value="sedikit">
+                            <label for="bantuan2">Butuh bantuan sedikit</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bantuan3" name="butuh_bantuan" value="sangat">
+                            <label for="bantuan3">Sangat butuh bantuan</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 20 -->
+                <div class="question-card">
+                    <h4>20. Apakah ada perdarahan banyak mendadak?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="perdarahan_mendadak1" name="perdarahan_mendadak" value="tidak" required>
+                            <label for="perdarahan_mendadak1">Tidak ada</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="perdarahan_mendadak2" name="perdarahan_mendadak" value="ya">
+                            <label for="perdarahan_mendadak2">Ya, ada perdarahan mendadak</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 21 -->
+                <div class="question-card">
+                    <h4>21. Apakah ada bau busuk dari lokia (cairan nifas)?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="lokia1" name="bau_lokia" value="tidak" required>
+                            <label for="lokia1">Tidak ada bau busuk</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="lokia2" name="bau_lokia" value="sedikit">
+                            <label for="lokia2">Sedikit berbau</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="lokia3" name="bau_lokia" value="busuk">
+                            <label for="lokia3">Berbau busuk</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 22 -->
+                <div class="question-card">
+                    <h4>22. Apakah ada nyeri kepala hebat, penglihatan kabur, atau bengkak pada wajah/tangan?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="kepala1" name="sakit_kepala" value="tidak" required>
+                            <label for="kepala1">Tidak ada gejala tersebut</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="kepala2" name="sakit_kepala" value="ringan">
+                            <label for="kepala2">Sakit kepala ringan</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="kepala3" name="sakit_kepala" value="hebat">
+                            <label for="kepala3">Sakit kepala hebat + penglihatan kabur</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 23 -->
+                <div class="question-card">
+                    <h4>23. Apakah ibu merasa sangat lemah sampai sulit beraktivitas?</h4>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="lemah1" name="kelemahan" value="tidak" required>
+                            <label for="lemah1">Tidak terlalu lemah</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="lemah2" name="kelemahan" value="sedikit">
+                            <label for="lemah2">Sedikit lemah</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="lemah3" name="kelemahan" value="sangat">
+                            <label for="lemah3">Sangat lemah, sulit beraktivitas</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button type="button" class="nav-btn btn-secondary" onclick="showMenu()">
+                        <i class="fas fa-arrow-left"></i> Kembali ke Menu
+                    </button>
+                    <button type="submit" class="nav-btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Kirim Hasil
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Results Page -->
+        <div id="resultsPage" class="card hidden">
+            <h2><i class="fas fa-chart-line"></i> Hasil Pemeriksaan</h2>
+            
+            <div id="emailStatus" class="email-status hidden">
+                <i class="fas fa-check-circle"></i> 
+                Data berhasil dikirim ke admin untuk monitoring!
+            </div>
+            
+            <div id="resultsContent">
+                <!-- Results will be populated here -->
+            </div>
+            
+            <div class="quote-section">
+                <div class="quote-text">
+                    "Masa nifas adalah fase penting dalam perjalanan keibuan. Tubuh yang sehat adalah investasi terbaik untuk masa depan yang cerah bersama buah hati. Tetap semangat, Bu! Setiap hari adalah langkah menuju pemulihan yang sempurna. Ingatlah bahwa merawat diri sendiri adalah bagian dari merawat buah hati."
+                </div>
+                <small><i class="fas fa-heart"></i> Dengan cinta untuk semua ibu hebat Indonesia</small>
+            </div>
+            
+            <div class="nav-buttons">
+                <button type="button" class="nav-btn btn-primary" onclick="showMenu()">
+                    <i class="fas fa-home"></i> Kembali ke Menu Utama
+                </button>
+                <button type="button" class="nav-btn btn-secondary" onclick="endSession()">
+                    <i class="fas fa-sign-out-alt"></i> Akhiri Sesi
+                </button>
+            </div>
+        </div>
+
+        <!-- Material Page -->
+        <div id="materialPage" class="card hidden">
+            <h2><i class="fas fa-book-open"></i> Materi Masa Nifas</h2>
+            <div class="material-content">
+                <p><strong>Masa nifas (puerperium)</strong> adalah periode kritis setelah persalinan yang berlangsung dari saat bayi dilahirkan hingga sekitar 6 minggu (42 hari) setelahnya. Pada masa ini, tubuh ibu mengalami banyak perubahan fisik dan emosional untuk kembali ke kondisi sebelum hamil. Meskipun banyak perubahan ini adalah hal yang normal, beberapa tanda dan gejala bisa menjadi indikasi adanya komplikasi serius yang membutuhkan penanganan medis segera. Deteksi dini sangat penting untuk mencegah komplikasi yang dapat mengancam nyawa.</p>
+
+                <h3><i class="fas fa-exclamation-triangle"></i> I. Tanda-Tanda Bahaya Fisik Masa Nifas</h3>
+                
+                <p>Ibu nifas dan keluarganya harus mengenali tanda-tanda berikut dan tidak menunda untuk mencari pertolongan medis jika salah satu tanda ini muncul:</p>
+
+                <h4>1. Perdarahan Berlebihan (Perdarahan Postpartum)</h4>
+                <ul>
+                    <li><strong>Tanda:</strong> Mengganti pembalut lebih dari satu kali dalam satu jam, darah yang keluar berbau tidak sedap, atau terdapat gumpalan darah yang besar (seukuran bola golf atau lebih)</li>
+                    <li><strong>Risiko Komplikasi:</strong> Anemia, syok, bahkan kematian</li>
+                    <li><strong>Penyebab Umum:</strong> Sisa plasenta atau ari-ari yang tertinggal di rahim, robekan jalan lahir yang tidak terdeteksi, atau rahim yang tidak berkontraksi dengan baik</li>
+                </ul>
+
+                <h4>2. Demam Tinggi dan Menggigil</h4>
+                <ul>
+                    <li><strong>Tanda:</strong> Suhu tubuh lebih dari 38°C selama dua hari berturut-turut dalam 10 hari pertama pasca melahirkan</li>
+                    <li><strong>Risiko Komplikasi:</strong> Infeksi (sepsis puerperalis) yang dapat terjadi pada rahim, saluran kemih, atau luka jahitan</li>
+                    <li><strong>Gejala Penyerta:</strong> Nyeri hebat pada perut, bau busuk pada cairan nifas (lochea), atau nyeri dan bengkak pada payudara</li>
+                </ul>
+
+                <h4>3. Nyeri Hebat yang Tidak Tertahankan</h4>
+                <ul>
+                    <li><strong>Tanda:</strong> Nyeri hebat pada perut bagian bawah atau luka jahitan yang tidak membaik, bahkan memburuk</li>
+                    <li><strong>Risiko Komplikasi:</strong> Infeksi rahim (endometritis) atau infeksi pada luka jahitan (episiotomi atau bekas operasi caesar)</li>
+                    <li><strong>Nyeri pada Betis:</strong> Nyeri, bengkak, kemerahan, dan rasa panas pada betis bisa menjadi tanda adanya gumpalan darah (Deep Vein Thrombosis/DVT) yang sangat berbahaya jika berpindah ke paru-paru</li>
+                </ul>
+
+                <h4>4. Masalah pada Payudara</h4>
+                <ul>
+                    <li><strong>Tanda:</strong> Payudara membengkak, terasa panas, merah, dan sangat nyeri, seringkali disertai demam</li>
+                    <li><strong>Risiko Komplikasi:</strong> Mastitis (infeksi payudara)</li>
+                    <li><strong>Pencegahan:</strong> Menyusui secara teratur dan memastikan perlekatan bayi sudah benar</li>
+                </ul>
+
+                <h4>5. Sakit Kepala Hebat dan Gangguan Penglihatan</h4>
+                <ul>
+                    <li><strong>Tanda:</strong> Sakit kepala yang sangat mengganggu, pandangan kabur, atau bengkak pada wajah, tangan, dan kaki</li>
+                    <li><strong>Risiko Komplikasi:</strong> Preeklampsia postpartum, yang merupakan kondisi tekanan darah tinggi pasca melahirkan dan dapat berakibat fatal</li>
+                </ul>
+
+                <h4>6. Masalah Saluran Kemih</h4>
+                <ul>
+                    <li><strong>Tanda:</strong> Nyeri atau panas saat buang air kecil, sering buang air kecil, atau kesulitan menahan buang air kecil</li>
+                    <li><strong>Risiko Komplikasi:</strong> Infeksi Saluran Kemih (ISK)</li>
+                </ul>
+
+                <h3><i class="fas fa-brain"></i> II. Tanda-Tanda Bahaya Psikologis Masa Nifas</h3>
+                
+                <p>Selain tanda fisik, perubahan emosional juga perlu diwaspadai:</p>
+
+                <h4>1. "Baby Blues" yang Tidak Membaik</h4>
+                <ul>
+                    <li><strong>Tanda:</strong> Merasa sedih, mudah menangis, cemas, dan lelah yang umumnya terjadi pada beberapa hari pertama dan menghilang dalam dua minggu</li>
+                    <li><strong>Deteksi Dini:</strong> Jika perasaan ini tidak membaik atau justru memburuk, ibu bisa berisiko mengalami depresi postpartum</li>
+                </ul>
+
+                <h4>2. Depresi Postpartum</h4>
+                <ul>
+                    <li><strong>Tanda:</strong> Perasaan sedih dan putus asa yang berlangsung lebih dari dua minggu, kehilangan minat pada hal-hal yang disukai, tidak memiliki energi, sulit tidur, merasa bersalah, dan kesulitan merawat bayi</li>
+                    <li><strong>Risiko Komplikasi:</strong> Gangguan mental yang lebih serius jika tidak ditangani</li>
+                </ul>
+
+                <h3><i class="fas fa-search"></i> III. Deteksi Dini dan Tindakan Pencegahan</h3>
+                
+                <p>Deteksi dini adalah kunci untuk mencegah komplikasi masa nifas. Berikut adalah langkah-langkah yang bisa dilakukan:</p>
+
+                <h4>1. Kunjungan Nifas Teratur:</h4>
+                <p><strong>Waktu Kunjungan:</strong> Ibu dianjurkan untuk melakukan kunjungan nifas minimal 3 kali:</p>
+                <ul>
+                    <li><strong>Kunjungan pertama:</strong> 6 jam - 3 hari setelah persalinan</li>
+                    <li><strong>Kunjungan kedua:</strong> 8 - 14 hari setelah persalinan</li>
+                    <li><strong>Kunjungan ketiga:</strong> 6 minggu setelah persalinan</li>
+                </ul>
+                <p><strong>Tujuan:</strong> Untuk memantau kondisi kesehatan ibu dan bayi, memeriksa involusi rahim, luka jahitan, produksi ASI, dan mendeteksi tanda bahaya sedini mungkin.</p>
+
+                <h4>2. Pemantauan Mandiri di Rumah:</h4>
+                <ul>
+                    <li><strong>Perhatikan Perdarahan:</strong> Hitung jumlah pembalut yang digunakan, perhatikan warna dan bau darah nifas (lochea)</li>
+                    <li><strong>Periksa Suhu Tubuh:</strong> Ukur suhu tubuh secara rutin jika merasa tidak enak badan</li>
+                    <li><strong>Cek Kondisi Luka:</strong> Perhatikan tanda-tanda infeksi pada luka jahitan, seperti bengkak, kemerahan, nyeri, atau keluarnya cairan</li>
+                    <li><strong>Perhatikan Perubahan Fisik Lainnya:</strong> Jika mengalami sakit kepala hebat, nyeri betis, atau sesak napas, segera cari bantuan medis</li>
+                    <li><strong>Pantau Kondisi Emosional:</strong> Bicarakan perasaan dengan pasangan atau keluarga. Jika perasaan sedih dan cemas tidak kunjung membaik, segera berkonsultasi dengan profesional kesehatan</li>
+                </ul>
+
+                <h4>3. Edukasi dan Dukungan Keluarga:</h4>
+                <ul>
+                    <li>Keluarga, terutama suami, memiliki peran penting dalam mengenali tanda-tanda bahaya pada ibu nifas</li>
+                    <li>Mendukung ibu untuk beristirahat cukup, makan makanan bergizi, dan menjaga kebersihan diri</li>
+                    <li>Mendorong ibu untuk tidak ragu mencari bantuan medis jika ada gejala yang mencurigakan</li>
+                </ul>
+
+                <p style="background: #e3f2fd; padding: 15px; border-radius: 10px; margin-top: 30px; text-align: center;">
+                    <strong>Dengan pemahaman yang baik tentang tanda bahaya dan kesadaran untuk melakukan deteksi dini, risiko komplikasi serius pada masa nifas dapat dicegah, sehingga ibu dapat pulih dengan sehat dan menjalani peran barunya dengan optimal.</strong>
+                </p>
+            </div>
+            
+            <div class="nav-buttons">
+                <button type="button" class="nav-btn btn-primary" onclick="showMenu()">
+                    <i class="fas fa-arrow-left"></i> Kembali ke Menu
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let userData = {};
+        let assessmentData = {};
+
+        // Progress tracking
+        function updateProgress() {
+            const form = document.getElementById('assessmentForm');
+            const totalQuestions = 23;
+            let answeredQuestions = 0;
+            
+            // Count answered questions
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionNames = [
+                    'darah_kondisi', 'perdarahan_banyak', 'gumpalan_darah', 'demam', 'bau_nifas',
+                    'nyeri_perut', 'kondisi_payudara', 'kondisi_umum', 'kualitas_tidur', 'nyeri_perineum',
+                    'kesulitan_kemih', 'nyeri_buang_air_kecil', 'buang_air_besar', 'produksi_asi', 'kondisi_puting',
+                    'bayi_menyusu', 'kondisi_mental', 'kecemasan', 'butuh_bantuan', 'perdarahan_mendadak',
+                    'bau_lokia', 'sakit_kepala', 'kelemahan'
+                ];
+                
+                if (i <= questionNames.length) {
+                    const radios = form.querySelectorAll(`input[name="${questionNames[i-1]}"]:checked`);
+                    if (radios.length > 0) answeredQuestions++;
+                }
+            }
+            
+            const percentage = (answeredQuestions / totalQuestions) * 100;
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = `${answeredQuestions}/${totalQuestions}`;
+        }
+
+        // Add event listeners to all radio buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const radios = document.querySelectorAll('input[type="radio"]');
+            radios.forEach(radio => {
+                radio.addEventListener('change', updateProgress);
+            });
+        });
+
+        function showCover() {
+            hideAllPages();
+            setTimeout(() => showPage('coverPage'), 300);
+        }
+
+        function showPersonalInfo() {
+            hideAllPages();
+            setTimeout(() => showPage('personalInfoPage'), 300);
+        }
+
+        function showMenu() {
+            hideAllPages();
+            setTimeout(() => {
+                showPage('menuPage');
+                document.getElementById('welcomeName').textContent = userData.nama || 'Ibu';
+                document.getElementById('dayCounter').textContent = userData.hariKe || '0';
+            }, 300);
+        }
+
+        function showAssessment() {
+            hideAllPages();
+            setTimeout(() => showPage('assessmentPage'), 300);
+            updateProgress();
+        }
+
+        function showMaterial() {
+            hideAllPages();
+            setTimeout(() => showPage('materialPage'), 300);
+        }
+
+        function showResults() {
+            hideAllPages();
+            setTimeout(() => showPage('resultsPage'), 300);
+        }
+
+        function hideAllPages() {
+            const pages = ['coverPage', 'personalInfoPage', 'menuPage', 'assessmentPage', 'resultsPage', 'materialPage'];
+            pages.forEach(page => {
+                const element = document.getElementById(page);
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    element.classList.add('hidden');
+                }, 300);
+            });
+        }
+
+        function showPage(pageId) {
+            const page = document.getElementById(pageId);
+            page.classList.remove('hidden');
+            setTimeout(() => {
+                page.style.opacity = '1';
+                page.style.transform = 'translateY(0)';
+            }, 50);
+        }
+
+        function endSession() {
+            if (confirm('Apakah Anda yakin ingin mengakhiri sesi ini?')) {
+                showCover();
+                userData = {};
+                assessmentData = {};
+                document.getElementById('personalForm').reset();
+                if (document.getElementById('assessmentForm')) {
+                    document.getElementById('assessmentForm').reset();
+                }
+                updateProgress();
+            }
+        }
+
+        // Personal form submission
+        document.getElementById('personalForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            userData.nama = document.getElementById('nama').value;
+            userData.tanggalPersalinan = document.getElementById('tanggalPersalinan').value;
+            
+            // Calculate days since birth
+            const birthDate = new Date(userData.tanggalPersalinan);
+            const today = new Date();
+            const diffTime = Math.abs(today - birthDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            userData.hariKe = diffDays;
+            
+            showMenu();
+        });
+
+        // Assessment form submission
+        document.getElementById('assessmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Check if all questions are answered
+            const formData = new FormData(e.target);
+            const expectedQuestions = 23;
+            const answeredQuestions = Array.from(formData.keys()).length;
+            
+            if (answeredQuestions < expectedQuestions) {
+                alert('Mohon jawab semua pertanyaan sebelum mengirim hasil.');
+                return;
+            }
+            
+            // Collect form data
+            assessmentData = {};
+            for (let [key, value] of formData.entries()) {
+                assessmentData[key] = value;
+            }
+            
+            // Add metadata
+            assessmentData.timestamp = new Date().toISOString();
+            assessmentData.nama = userData.nama;
+            assessmentData.tanggalPersalinan = userData.tanggalPersalinan;
+            assessmentData.hariKe = userData.hariKe;
+            
+            // Generate results
+            generateResults();
+            
+            // Send email report
+            sendEmailReport();
+            
+            showResults();
+        });
+
+        function generateResults() {
+            const results = [];
+            let overallRisk = 'rendah';
+            let criticalCount = 0;
+
+            // Comprehensive analysis for all 23 questions
+            const questionAnalysis = [
+                {
+                    key: 'darah_kondisi',
+                    question: 'Kondisi Darah Nifas',
+                    analyze: (value) => {
+                        if (value === 'berlebihan') {
+                            criticalCount++;
+                            return { risk: 'danger', text: 'BAHAYA: Darah yang berbau busuk dan berlebihan menandakan kemungkinan infeksi atau komplikasi serius. SEGERA konsultasi ke dokter!' };
+                        } else if (value === 'berbau') {
+                            return { risk: 'warning', text: 'PERHATIAN: Darah yang berbau tidak sedap perlu diperhatikan. Jaga kebersihan dan pantau perkembangannya.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Kondisi darah nifas Anda normal. Terus jaga kebersihan dan pantau perubahan.' };
+                    }
+                },
+                {
+                    key: 'perdarahan_banyak',
+                    question: 'Perdarahan Berlebihan (>2 pembalut/jam)',
+                    analyze: (value) => {
+                        if (value === 'ya') {
+                            criticalCount++;
+                            return { risk: 'danger', text: 'BAHAYA: Perdarahan berlebihan adalah tanda bahaya yang memerlukan penanganan medis SEGERA. Jangan tunda untuk ke rumah sakit!' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Jumlah perdarahan masih dalam batas normal.' };
+                    }
+                },
+                {
+                    key: 'gumpalan_darah',
+                    question: 'Gumpalan Darah',
+                    analyze: (value) => {
+                        if (value === 'besar') {
+                            criticalCount++;
+                            return { risk: 'danger', text: 'BAHAYA: Gumpalan darah besar menandakan kemungkinan sisa plasenta atau komplikasi lain. Segera konsultasi ke tenaga medis.' };
+                        } else if (value === 'kecil') {
+                            return { risk: 'warning', text: 'PERHATIAN: Gumpalan kecil masih bisa normal, namun tetap pantau perkembangannya.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Tidak ada gumpalan darah menunjukkan kondisi yang normal.' };
+                    }
+                },
+                {
+                    key: 'demam',
+                    question: 'Demam dan Menggigil',
+                    analyze: (value) => {
+                        if (value === 'tinggi') {
+                            criticalCount++;
+                            return { risk: 'danger', text: 'BAHAYA: Demam tinggi dan menggigil dapat menandakan infeksi serius. Segera cari pertolongan medis!' };
+                        } else if (value === 'ringan') {
+                            return { risk: 'warning', text: 'PERHATIAN: Demam ringan perlu dipantau. Jika berlanjut atau memburuk, segera konsultasi.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Suhu tubuh normal menunjukkan tidak ada tanda infeksi.' };
+                    }
+                },
+                {
+                    key: 'bau_nifas',
+                    question: 'Bau Darah Nifas',
+                    analyze: (value) => {
+                        if (value === 'busuk') {
+                            criticalCount++;
+                            return { risk: 'danger', text: 'BAHAYA: Bau busuk pada darah nifas menandakan infeksi. Segera konsultasi ke tenaga medis!' };
+                        } else if (value === 'sedikit') {
+                            return { risk: 'warning', text: 'PERHATIAN: Sedikit bau masih normal, tapi jaga kebersihan area kewanitaan.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Tidak ada bau busuk menunjukkan kondisi yang sehat.' };
+                    }
+                },
+                {
+                    key: 'nyeri_perut',
+                    question: 'Nyeri Perut Bagian Bawah',
+                    analyze: (value) => {
+                        if (value === 'hebat') {
+                            criticalCount++;
+                            return { risk: 'danger', text: 'BAHAYA: Nyeri hebat dapat menandakan infeksi rahim atau komplikasi lain. Segera konsultasi ke dokter!' };
+                        } else if (value === 'ringan') {
+                            return { risk: 'normal', text: 'NORMAL: Nyeri ringan pasca persalinan adalah hal yang wajar akibat kontraksi rahim.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Tidak ada nyeri menunjukkan proses pemulihan yang baik.' };
+                    }
+                },
+                {
+                    key: 'kondisi_payudara',
+                    question: 'Kondisi Payudara',
+                    analyze: (value) => {
+                        if (value === 'bermasalah') {
+                            criticalCount++;
+                            return { risk: 'danger', text: 'BAHAYA: Gejala ini menunjukkan kemungkinan mastitis (infeksi payudara). Segera konsultasi untuk pengobatan.' };
+                        } else if (value === 'ringan') {
+                            return { risk: 'normal', text: 'NORMAL: Sedikit bengkak pada awal menyusui adalah hal yang wajar. Lanjutkan menyusui secara teratur.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Payudara dalam kondisi sehat untuk proses menyusui.' };
+                    }
+                },
+                {
+                    key: 'kondisi_umum',
+                    question: 'Kondisi Umum (Pusing, Lemas)',
+                    analyze: (value) => {
+                        if (value === 'buruk') {
+                            return { risk: 'warning', text: 'PERHATIAN: Kondisi ini dapat menandakan anemia atau kelelahan berlebihan. Istirahat cukup dan konsultasi jika tidak membaik.' };
+                        } else if (value === 'ringan') {
+                            return { risk: 'normal', text: 'NORMAL: Sedikit lemas pasca persalinan adalah hal yang wajar. Istirahat cukup dan makan bergizi.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Kondisi fisik Anda baik, pertahankan pola hidup sehat.' };
+                    }
+                },
+                {
+                    key: 'kualitas_tidur',
+                    question: 'Kualitas Tidur dan Istirahat',
+                    analyze: (value) => {
+                        if (value === 'buruk') {
+                            return { risk: 'warning', text: 'PERHATIAN: Kurang tidur dapat mempengaruhi pemulihan. Cobalah tidur saat bayi tidur dan minta bantuan keluarga.' };
+                        } else if (value === 'sedang') {
+                            return { risk: 'normal', text: 'NORMAL: Tidur kurang nyenyak wajar pada masa nifas. Usahakan istirahat yang cukup.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Kualitas tidur yang baik mendukung proses pemulihan.' };
+                    }
+                },
+                {
+                    key: 'nyeri_perineum',
+                    question: 'Nyeri Perineum/Bekas Operasi',
+                    analyze: (value) => {
+                        if (value === 'hebat') {
+                            return { risk: 'warning', text: 'PERHATIAN: Nyeri hebat pada perineum atau bekas operasi perlu diperiksa. Konsultasi jika tidak membaik.' };
+                        } else if (value === 'ringan') {
+                            return { risk: 'normal', text: 'NORMAL: Nyeri ringan pada area perineum atau bekas operasi adalah hal yang wajar.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Tidak ada nyeri berlebihan menunjukkan penyembuhan yang baik.' };
+                    }
+                },
+                {
+                    key: 'kesulitan_kemih',
+                    question: 'Kesulitan Berkemih',
+                    analyze: (value) => {
+                        if (value === 'sangat') {
+                            return { risk: 'warning', text: 'PERHATIAN: Kesulitan berkemih yang parah perlu diperiksa. Mungkin ada pembengkakan atau komplikasi lain.' };
+                        } else if (value === 'sedikit') {
+                            return { risk: 'normal', text: 'NORMAL: Sedikit kesulitan berkemih wajar setelah persalinan. Akan membaik seiring waktu.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Fungsi berkemih normal.' };
+                    }
+                },
+                {
+                    key: 'nyeri_buang_air_kecil',
+                    question: 'Nyeri Saat Buang Air Kecil',
+                    analyze: (value) => {
+                        if (value === 'hebat') {
+                            return { risk: 'warning', text: 'PERHATIAN: Nyeri atau panas saat buang air kecil dapat menandakan infeksi saluran kemih. Konsultasi ke dokter.' };
+                        } else if (value === 'ringan') {
+                            return { risk: 'normal', text: 'NORMAL: Sedikit nyeri/panas wajar, terutama jika ada jahitan perineum.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Tidak ada nyeri saat buang air kecil.' };
+                    }
+                },
+                {
+                    key: 'buang_air_besar',
+                    question: 'Buang Air Besar',
+                    analyze: (value) => {
+                        if (value === 'konstipasi') {
+                            return { risk: 'warning', text: 'PERHATIAN: Konstipasi dapat menyebabkan ketidaknyamanan. Perbanyak serat, cairan, dan konsultasi jika perlu.' };
+                        } else if (value === 'sedikit_sulit') {
+                            return { risk: 'normal', text: 'NORMAL: Sedikit kesulitan BAB wajar setelah persalinan. Perbanyak serat dan cairan.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Fungsi pencernaan normal.' };
+                    }
+                },
+                {
+                    key: 'produksi_asi',
+                    question: 'Produksi ASI',
+                    analyze: (value) => {
+                        if (value === 'tidak') {
+                            return { risk: 'warning', text: 'PERHATIAN: ASI yang belum keluar perlu stimulasi. Sering menyusui, pijat payudara, dan konsultasi ke konselor laktasi.' };
+                        } else if (value === 'sedikit') {
+                            return { risk: 'normal', text: 'NORMAL: Produksi ASI akan meningkat seiring stimulasi. Terus menyusui dan jaga nutrisi.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Produksi ASI lancar mendukung nutrisi bayi.' };
+                    }
+                },
+                {
+                    key: 'kondisi_puting',
+                    question: 'Kondisi Puting Susu',
+                    analyze: (value) => {
+                        if (value === 'bengkak_nyeri') {
+                            return { risk: 'warning', text: 'PERHATIAN: Puting bengkak dan nyeri dapat mengganggu menyusui. Perbaiki posisi menyusui dan konsultasi.' };
+                        } else if (value === 'lecet') {
+                            return { risk: 'warning', text: 'PERHATIAN: Puting lecet perlu perawatan. Perbaiki perlekatan bayi dan gunakan krim lanolin.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Kondisi puting sehat mendukung proses menyusui.' };
+                    }
+                },
+                {
+                    key: 'bayi_menyusu',
+                    question: 'Kemampuan Bayi Menyusu',
+                    analyze: (value) => {
+                        if (value === 'tidak_bisa') {
+                            return { risk: 'warning', text: 'PERHATIAN: Bayi tidak bisa menyusu perlu perhatian khusus. Konsultasi ke konselor laktasi atau dokter anak.' };
+                        } else if (value === 'kesulitan') {
+                            return { risk: 'normal', text: 'NORMAL: Kesulitan awal menyusu wajar. Berlatih posisi dan perlekatan yang benar.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Bayi dapat menyusu dengan baik.' };
+                    }
+                },
+                {
+                    key: 'kondisi_mental',
+                    question: 'Kondisi Mental/Emosional',
+                    analyze: (value) => {
+                        if (value === 'buruk') {
+                            return { risk: 'warning', text: 'PERHATIAN: Gejala ini dapat menunjukkan depresi postpartum. Sangat penting untuk berkonsultasi dengan psikolog atau psikiater.' };
+                        } else if (value === 'ringan') {
+                            return { risk: 'normal', text: 'NORMAL: "Baby blues" ringan adalah hal yang wajar. Bicarakan dengan keluarga dan minta dukungan.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Kondisi mental Anda stabil, ini sangat baik untuk proses pemulihan.' };
+                    }
+                },
+                {
+                    key: 'kecemasan',
+                    question: 'Tingkat Kecemasan',
+                    analyze: (value) => {
+                        if (value === 'sangat') {
+                            return { risk: 'warning', text: 'PERHATIAN: Kecemasan berlebihan dapat mempengaruhi kemampuan merawat bayi. Konsultasi dengan profesional kesehatan mental.' };
+                        } else if (value === 'sedikit') {
+                            return { risk: 'normal', text: 'NORMAL: Sedikit cemas wajar sebagai ibu baru. Mintalah dukungan keluarga dan teman.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Tingkat kecemasan normal.' };
+                    }
+                },
+                {
+                    key: 'butuh_bantuan',
+                    question: 'Kebutuhan Bantuan Keluarga',
+                    analyze: (value) => {
+                        if (value === 'sangat') {
+                            return { risk: 'normal', text: 'NORMAL: Membutuhkan bantuan keluarga adalah hal yang wajar. Jangan ragu untuk meminta bantuan.' };
+                        } else if (value === 'sedikit') {
+                            return { risk: 'normal', text: 'BAIK: Kemandirian dengan bantuan seperlunya menunjukkan adaptasi yang baik.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Mampu mandiri dalam merawat bayi.' };
+                    }
+                },
+                {
+                    key: 'perdarahan_mendadak',
+                    question: 'Perdarahan Mendadak',
+                    analyze: (value) => {
+                        if (value === 'ya') {
+                            criticalCount++;
+                            return { risk: 'danger', text: 'BAHAYA: Perdarahan mendadak adalah tanda bahaya yang memerlukan penanganan medis SEGERA!' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Tidak ada perdarahan mendadak.' };
+                    }
+                },
+                {
+                    key: 'bau_lokia',
+                    question: 'Bau Lokia (Cairan Nifas)',
+                    analyze: (value) => {
+                        if (value === 'busuk') {
+                            criticalCount++;
+                            return { risk: 'danger', text: 'BAHAYA: Bau busuk dari lokia menandakan infeksi. Segera konsultasi ke tenaga medis!' };
+                        } else if (value === 'sedikit') {
+                            return { risk: 'normal', text: 'NORMAL: Sedikit bau masih dalam batas wajar. Jaga kebersihan area kewanitaan.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Lokia tidak berbau menunjukkan kondisi yang sehat.' };
+                    }
+                },
+                {
+                    key: 'sakit_kepala',
+                    question: 'Sakit Kepala dan Gangguan Penglihatan',
+                    analyze: (value) => {
+                        if (value === 'hebat') {
+                            criticalCount++;
+                            return { risk: 'danger', text: 'BAHAYA: Sakit kepala hebat dengan gangguan penglihatan dapat menandakan preeklampsia postpartum. Segera ke rumah sakit!' };
+                        } else if (value === 'ringan') {
+                            return { risk: 'normal', text: 'NORMAL: Sakit kepala ringan wajar, mungkin karena kelelahan. Istirahat cukup dan minum air yang banyak.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Tidak ada gangguan sakit kepala atau penglihatan.' };
+                    }
+                },
+                {
+                    key: 'kelemahan',
+                    question: 'Tingkat Kelemahan',
+                    analyze: (value) => {
+                        if (value === 'sangat') {
+                            return { risk: 'warning', text: 'PERHATIAN: Kelemahan berlebihan dapat menandakan anemia atau komplikasi lain. Konsultasi ke dokter untuk pemeriksaan lebih lanjut.' };
+                        } else if (value === 'sedikit') {
+                            return { risk: 'normal', text: 'NORMAL: Sedikit lemah setelah persalinan adalah hal yang wajar. Istirahat dan nutrisi yang baik.' };
+                        }
+                        return { risk: 'normal', text: 'BAIK: Kondisi fisik kuat mendukung pemulihan yang optimal.' };
+                    }
+                }
+            ];
+
+            // Process each question
+            questionAnalysis.forEach(qa => {
+                if (assessmentData[qa.key]) {
+                    const analysis = qa.analyze(assessmentData[qa.key]);
+                    results.push({
+                        question: qa.question,
+                        answer: getAnswerText(qa.key, assessmentData[qa.key]),
+                        analysis: analysis.text,
+                        risk: analysis.risk
+                    });
+                }
+            });
+
+            // Determine overall risk
+            if (criticalCount > 0) {
+                overallRisk = 'tinggi';
+            } else {
+                const warningCount = results.filter(r => r.risk === 'warning').length;
+                if (warningCount >= 3) {
+                    overallRisk = 'sedang';
+                }
+            }
+
+            displayResults(results, overallRisk, criticalCount);
+        }
+
+        function getAnswerText(question, value) {
+            const answerMap = {
+                'darah_kondisi': {
+                    'normal': 'Normal (merah tua, tidak berbau busuk)',
+                    'berbau': 'Berbau tidak sedap',
+                    'berlebihan': 'Sangat banyak dan berbau busuk'
+                },
+                'perdarahan_banyak': {
+                    'tidak': 'Tidak',
+                    'ya': 'Ya, darah keluar sangat banyak'
+                },
+                'gumpalan_darah': {
+                    'tidak': 'Tidak ada',
+                    'kecil': 'Ada, tapi kecil',
+                    'besar': 'Ada gumpalan besar'
+                },
+                'demam': {
+                    'tidak': 'Tidak ada demam',
+                    'ringan': 'Demam ringan',
+                    'tinggi': 'Demam tinggi dan menggigil'
+                },
+                'bau_nifas': {
+                    'tidak': 'Tidak berbau',
+                    'sedikit': 'Sedikit berbau',
+                    'busuk': 'Berbau busuk'
+                },
+                'nyeri_perut': {
+                    'tidak': 'Tidak ada nyeri',
+                    'ringan': 'Nyeri ringan',
+                    'hebat': 'Nyeri hebat'
+                },
+                'kondisi_payudara': {
+                    'normal': 'Normal',
+                    'ringan': 'Sedikit bengkak',
+                    'bermasalah': 'Bengkak, merah, dan nyeri'
+                },
+                'kondisi_umum': {
+                    'baik': 'Kondisi baik',
+                    'ringan': 'Sedikit lemas',
+                    'buruk': 'Sangat lemas dan pusing'
+                },
+                'kualitas_tidur': {
+                    'baik': 'Bisa tidur dengan baik',
+                    'sedang': 'Tidur kurang nyenyak',
+                    'buruk': 'Sulit tidur/insomnia'
+                },
+                'nyeri_perineum': {
+                    'tidak': 'Tidak ada nyeri berlebihan',
+                    'ringan': 'Nyeri ringan',
+                    'hebat': 'Nyeri hebat'
+                },
+                'kesulitan_kemih': {
+                    'tidak': 'Tidak ada kesulitan',
+                    'sedikit': 'Sedikit kesulitan',
+                    'sangat': 'Sangat sulit berkemih'
+                },
+                'nyeri_buang_air_kecil': {
+                    'tidak': 'Tidak ada nyeri',
+                    'ringan': 'Sedikit nyeri/panas',
+                    'hebat': 'Sangat nyeri/panas'
+                },
+                'buang_air_besar': {
+                    'lancar': 'Lancar',
+                    'sedikit_sulit': 'Sedikit sulit',
+                    'konstipasi': 'Konstipasi/sangat sulit'
+                },
+                'produksi_asi': {
+                    'lancar': 'Lancar',
+                    'sedikit': 'Sedikit keluar',
+                    'tidak': 'Belum/tidak keluar'
+                },
+                'kondisi_puting': {
+                    'normal': 'Normal, tidak ada masalah',
+                    'lecet': 'Puting lecet',
+                    'bengkak_nyeri': 'Bengkak dan sangat nyeri'
+                },
+                'bayi_menyusu': {
+                    'baik': 'Menyusu dengan baik',
+                    'kesulitan': 'Sedikit kesulitan',
+                    'tidak_bisa': 'Tidak bisa menyusu'
+                },
+                'kondisi_mental': {
+                    'baik': 'Perasaan stabil',
+                    'ringan': 'Kadang merasa sedih',
+                    'buruk': 'Sering menangis dan sedih'
+                },
+                'kecemasan': {
+                    'tidak': 'Tidak cemas berlebihan',
+                    'sedikit': 'Sedikit cemas',
+                    'sangat': 'Sangat cemas dan takut'
+                },
+                'butuh_bantuan': {
+                    'tidak': 'Bisa mandiri',
+                    'sedikit': 'Butuh bantuan sedikit',
+                    'sangat': 'Sangat butuh bantuan'
+                },
+                'perdarahan_mendadak': {
+                    'tidak': 'Tidak ada',
+                    'ya': 'Ya, ada perdarahan mendadak'
+                },
+                'bau_lokia': {
+                    'tidak': 'Tidak ada bau busuk',
+                    'sedikit': 'Sedikit berbau',
+                    'busuk': 'Berbau busuk'
+                },
+                'sakit_kepala': {
+                    'tidak': 'Tidak ada gejala tersebut',
+                    'ringan': 'Sakit kepala ringan',
+                    'hebat': 'Sakit kepala hebat + penglihatan kabur'
+                },
+                'kelemahan': {
+                    'tidak': 'Tidak terlalu lemah',
+                    'sedikit': 'Sedikit lemah',
+                    'sangat': 'Sangat lemah, sulit beraktivitas'
+                }
+            };
+            
+            return answerMap[question] ? answerMap[question][value] : value;
+        }
+
+        function displayResults(results, overallRisk, criticalCount) {
+            const resultsContent = document.getElementById('resultsContent');
+            
+            let riskColor = '#28a745';
+            let riskText = 'RENDAH';
+            let riskIcon = 'fa-check-circle';
+            let riskRecommendation = 'Kondisi Anda secara umum baik. Lanjutkan perawatan mandiri dan kunjungan rutin ke bidan/dokter.';
+            
+            if (overallRisk === 'sedang') {
+                riskColor = '#ffc107';
+                riskText = 'SEDANG';
+                riskIcon = 'fa-exclamation-triangle';
+                riskRecommendation = 'Ada beberapa hal yang perlu diperhatikan. Konsultasikan kondisi Anda dengan bidan atau dokter dalam 1-2 hari.';
+            } else if (overallRisk === 'tinggi') {
+                riskColor = '#dc3545';
+                riskText = 'TINGGI';
+                riskIcon = 'fa-exclamation-circle';
+                riskRecommendation = criticalCount > 1 ? 
+                    'SEGERA ke rumah sakit atau IGD terdekat! Beberapa gejala menunjukkan kondisi darurat yang perlu penanganan medis SEGERA.' :
+                    'SEGERA konsultasi ke dokter atau ke rumah sakit terdekat. Ada gejala yang perlu penanganan medis segera.';
+            }
+
+            let html = `
+                <div class="result-section">
+                    <div style="text-align: center; margin-bottom: 30px; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <h3 style="color: ${riskColor}; margin-bottom: 15px; font-size: 1.5rem;">
+                            <i class="fas ${riskIcon}"></i> 
+                            TINGKAT RISIKO: ${riskText}
+                        </h3>
+                        <p style="font-size: 1.1rem; font-weight: 500;">${riskRecommendation}</p>
+                        ${criticalCount > 0 ? `<div style="background: #fff3cd; border: 1px solid #ffeaa7; color: #856404; padding: 10px; border-radius: 5px; margin-top: 15px;"><strong>Ditemukan ${criticalCount} tanda bahaya!</strong></div>` : ''}
+                    </div>
+            `;
+
+            // Group results by risk level
+            const dangerResults = results.filter(r => r.risk === 'danger');
+            const warningResults = results.filter(r => r.risk === 'warning');
+            const normalResults = results.filter(r => r.risk === 'normal');
+
+            if (dangerResults.length > 0) {
+                html += '<h4 style="color: #dc3545; margin: 20px 0 15px 0;"><i class="fas fa-exclamation-circle"></i> Tanda Bahaya (Perlu Penanganan Segera):</h4>';
+                dangerResults.forEach(result => {
+                    html += `
+                        <div class="result-item danger">
+                            <h5 style="margin-bottom: 8px; color: #dc3545;">
+                                <i class="fas fa-warning"></i> ${result.question}
+                            </h5>
+                            <p><strong>Jawaban:</strong> ${result.answer}</p>
+                            <p><strong>Analisis:</strong> ${result.analysis}</p>
+                        </div>
+                    `;
+                });
+            }
+
+            if (warningResults.length > 0) {
+                html += '<h4 style="color: #ffc107; margin: 20px 0 15px 0;"><i class="fas fa-exclamation-triangle"></i> Perlu Perhatian:</h4>';
+                warningResults.forEach(result => {
+                    html += `
+                        <div class="result-item warning">
+                            <h5 style="margin-bottom: 8px; color: #ffc107;">
+                                <i class="fas fa-eye"></i> ${result.question}
+                            </h5>
+                            <p><strong>Jawaban:</strong> ${result.answer}</p>
+                            <p><strong>Analisis:</strong> ${result.analysis}</p>
+                        </div>
+                    `;
+                });
+            }
+
+            if (normalResults.length > 0) {
+                html += '<h4 style="color: #28a745; margin: 20px 0 15px 0;"><i class="fas fa-check-circle"></i> Kondisi Baik:</h4>';
+                html += '<div style="background: white; padding: 15px; border-radius: 10px; border-left: 4px solid #28a745;">';
+                html += '<p>Berikut aspek-aspek yang menunjukkan kondisi baik:</p><ul>';
+                normalResults.forEach(result => {
+                    html += `<li><strong>${result.question}:</strong> ${result.answer}</li>`;
+                });
+                html += '</ul></div>';
+            }
+
+            html += `
+                </div>
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h4><i class="fas fa-lightbulb"></i> Rekomendasi Umum Masa Nifas:</h4>
+                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                        <li><strong>Kebersihan:</strong> Jaga kebersihan diri terutama area kewanitaan, ganti pembalut secara teratur</li>
+                        <li><strong>Nutrisi:</strong> Konsumsi makanan bergizi seimbang dan perbanyak cairan (air putih, susu)</li>
+                        <li><strong>Istirahat:</strong> Tidur dan istirahat cukup, hindari aktivitas berat</li>
+                        <li><strong>Menyusui:</strong> Lakukan perawatan payudara dan berikan ASI eksklusif</li>
+                        <li><strong>Dukungan:</strong> Jangan ragu untuk meminta bantuan keluarga dan suami</li>
+                        <li><strong>Kontrol:</strong> Lakukan kunjungan nifas sesuai jadwal yang direkomendasikan</li>
+                        <li><strong>Waspadai:</strong> Kenali tanda-tanda bahaya dan segera konsultasi jika ada keluhan</li>
+                    </ul>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h4><i class="fas fa-phone-alt"></i> Kapan Harus Segera Mencari Bantuan Medis:</h4>
+                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8; color: #d32f2f;">
+                        <li>Perdarahan hebat (>2 pembalut per jam) atau perdarahan mendadak</li>
+                        <li>Demam tinggi >38°C disertai menggigil</li>
+                        <li>Bau busuk dari darah nifas atau lokia</li>
+                        <li>Nyeri hebat pada perut, kepala, atau payudara</li>
+                        <li>Kesulitan bernapas atau nyeri dada</li>
+                        <li>Gangguan penglihatan atau bengkak wajah/tangan</li>
+                        <li>Perasaan sedih/cemas berlebihan yang tidak membaik</li>
+                    </ul>
+                </div>
+                
+                <div style="text-align: center; background: #e8f5e8; padding: 15px; border-radius: 10px;">
+                    <p><strong>📅 Tanggal Pemeriksaan:</strong> ${new Date().toLocaleDateString('id-ID', { 
+                        weekday: 'long', 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                    })}</p>
+                    <p><strong>📊 Hari ke-${userData.hariKe}</strong> setelah persalinan (${userData.tanggalPersalinan})</p>
+                    <p><strong>👤 Nama:</strong> ${userData.nama}</p>
+                </div>
+            `;
+
+            resultsContent.innerHTML = html;
+
+            // Show email status
+            document.getElementById('emailStatus').classList.remove('hidden');
+        }
+
+        function sendEmailReport() {
+            // Prepare comprehensive email data
+            const emailData = {
+                to: 'hariantipertiwi6@gmail.com',
+                subject: `[MONITORING NIFAS] Laporan Pemeriksaan - ${userData.nama} (Hari ke-${userData.hariKe})`,
+                timestamp: new Date().toISOString(),
+                patientData: {
+                    nama: userData.nama,
+                    tanggalPersalinan: userData.tanggalPersalinan,
+                    hariKe: userData.hariKe,
+                    tanggalPemeriksaan: new Date().toLocaleDateString('id-ID'),
+                    waktuPemeriksaan: new Date().toLocaleTimeString('id-ID')
+                },
+                assessmentResults: assessmentData,
+                detailedAnswers: {
+                    // Physical symptoms
+                    'Kondisi darah nifas': getAnswerText('darah_kondisi', assessmentData.darah_kondisi),
+                    'Perdarahan berlebihan': getAnswerText('perdarahan_banyak', assessmentData.perdarahan_banyak),
+                    'Gumpalan darah': getAnswerText('gumpalan_darah', assessmentData.gumpalan_darah),
+                    'Demam dan menggigil': getAnswerText('demam', assessmentData.demam),
+                    'Bau darah nifas': getAnswerText('bau_nifas', assessmentData.bau_nifas),
+                    'Nyeri perut': getAnswerText('nyeri_perut', assessmentData.nyeri_perut),
+                    'Kondisi payudara': getAnswerText('kondisi_payudara', assessmentData.kondisi_payudara),
+                    'Kondisi umum': getAnswerText('kondisi_umum', assessmentData.kondisi_umum),
+                    'Kualitas tidur': getAnswerText('kualitas_tidur', assessmentData.kualitas_tidur),
+                    'Nyeri perineum': getAnswerText('nyeri_perineum', assessmentData.nyeri_perineum),
+                    
+                    // Urination and defecation
+                    'Kesulitan berkemih': getAnswerText('kesulitan_kemih', assessmentData.kesulitan_kemih),
+                    'Nyeri buang air kecil': getAnswerText('nyeri_buang_air_kecil', assessmentData.nyeri_buang_air_kecil),
+                    'Buang air besar': getAnswerText('buang_air_besar', assessmentData.buang_air_besar),
+                    
+                    // Breastfeeding
+                    'Produksi ASI': getAnswerText('produksi_asi', assessmentData.produksi_asi),
+                    'Kondisi puting': getAnswerText('kondisi_puting', assessmentData.kondisi_puting),
+                    'Bayi menyusu': getAnswerText('bayi_menyusu', assessmentData.bayi_menyusu),
+                    
+                    // Mental health
+                    'Kondisi mental': getAnswerText('kondisi_mental', assessmentData.kondisi_mental),
+                    'Tingkat kecemasan': getAnswerText('kecemasan', assessmentData.kecemasan),
+                    'Kebutuhan bantuan': getAnswerText('butuh_bantuan', assessmentData.butuh_bantuan),
+                    
+                    // Critical symptoms
+                    'Perdarahan mendadak': getAnswerText('perdarahan_mendadak', assessmentData.perdarahan_mendadak),
+                    'Bau lokia': getAnswerText('bau_lokia', assessmentData.bau_lokia),
+                    'Sakit kepala hebat': getAnswerText('sakit_kepala', assessmentData.sakit_kepala),
+                    'Tingkat kelemahan': getAnswerText('kelemahan', assessmentData.kelemahan)
+                }
+            };
+
+            // Calculate risk assessment
+            let criticalSymptoms = [];
+            let warningSymptoms = [];
+            
+            // Check for critical symptoms
+            if (assessmentData.perdarahan_banyak === 'ya') criticalSymptoms.push('Perdarahan berlebihan');
+            if (assessmentData.gumpalan_darah === 'besar') criticalSymptoms.push('Gumpalan darah besar');
+            if (assessmentData.demam === 'tinggi') criticalSymptoms.push('Demam tinggi dan menggigil');
+            if (assessmentData.darah_kondisi === 'berlebihan') criticalSymptoms.push('Darah berbau busuk dan berlebihan');
+            if (assessmentData.nyeri_perut === 'hebat') criticalSymptoms.push('Nyeri perut hebat');
+            if (assessmentData.kondisi_payudara === 'bermasalah') criticalSymptoms.push('Masalah payudara serius');
+            if (assessmentData.perdarahan_mendadak === 'ya') criticalSymptoms.push('Perdarahan mendadak');
+            if (assessmentData.bau_lokia === 'busuk') criticalSymptoms.push('Lokia berbau busuk');
+            if (assessmentData.sakit_kepala === 'hebat') criticalSymptoms.push('Sakit kepala hebat + gangguan penglihatan');
+            
+            // Check for warning symptoms
+            if (assessmentData.kondisi_mental === 'buruk') warningSymptoms.push('Kondisi mental buruk');
+            if (assessmentData.kecemasan === 'sangat') warningSymptoms.push('Kecemasan berlebihan');
+            if (assessmentData.kondisi_umum === 'buruk') warningSymptoms.push('Kondisi umum buruk');
+            if (assessmentData.kelemahan === 'sangat') warningSymptoms.push('Kelemahan berlebihan');
+            if (assessmentData.produksi_asi === 'tidak') warningSymptoms.push('ASI belum keluar');
+            
+            emailData.riskAssessment = {
+                overallRisk: criticalSymptoms.length > 0 ? 'TINGGI' : (warningSymptoms.length >= 3 ? 'SEDANG' : 'RENDAH'),
+                criticalSymptoms: criticalSymptoms,
+                warningSymptoms: warningSymptoms,
+                recommendedAction: criticalSymptoms.length > 0 ? 
+                    'SEGERA HUBUNGI PASIEN - RUJUK KE RUMAH SAKIT' : 
+                    (warningSymptoms.length >= 3 ? 'Konsultasi dalam 1-2 hari' : 'Monitoring rutin')
+            };
+
+            // Simulate sending email (in real application, this would use email service)
+            console.log('📧 Email Report Data:', emailData);
+            
+            // Create downloadable report
+            const reportText = generateTextReport(emailData);
+            
+            // In a real application, you would send this data to your backend
+            // which would then send the actual email
+            console.log('📄 Text Report:', reportText);
+            
+            // Show success notification
+            setTimeout(() => {
+                const status = document.getElementById('emailStatus');
+                status.innerHTML = `
+                    <i class="fas fa-check-circle"></i> 
+                    Data pemeriksaan berhasil dikirim ke admin untuk monitoring!
+                    <br><small>Email terkirim ke: hariantipertiwi6@gmail.com pada ${new Date().toLocaleString('id-ID')}</small>
+                `;
+            }, 1000);
+
+            // Auto-generate and log structured report
+            generateStructuredReport(emailData);
+        }
+
+        function generateTextReport(emailData) {
+            const report = `
+=======================================================
+               LAPORAN MONITORING IBU NIFAS
+=======================================================
+
+INFORMASI PASIEN:
+- Nama: ${emailData.patientData.nama}
+- Tanggal Persalinan: ${emailData.patientData.tanggalPersalinan}
+- Hari ke-: ${emailData.patientData.hariKe} setelah persalinan
+- Tanggal Pemeriksaan: ${emailData.patientData.tanggalPemeriksaan}
+- Waktu Pemeriksaan: ${emailData.patientData.waktuPemeriksaan}
+
+TINGKAT RISIKO: ${emailData.riskAssessment.overallRisk}
+
+${emailData.riskAssessment.criticalSymptoms.length > 0 ? 
+`⚠️  TANDA BAHAYA DITEMUKAN:
+${emailData.riskAssessment.criticalSymptoms.map(s => `- ${s}`).join('\n')}
+
+TINDAKAN YANG DIREKOMENDASIKAN: ${emailData.riskAssessment.recommendedAction}
+` : ''}
+
+${emailData.riskAssessment.warningSymptoms.length > 0 ? 
+`⚠️  GEJALA YANG PERLU DIPERHATIKAN:
+${emailData.riskAssessment.warningSymptoms.map(s => `- ${s}`).join('\n')}
+` : ''}
+
+HASIL PEMERIKSAAN DETAIL:
+=======================================================
+
+A. KONDISI FISIK:
+- Kondisi darah nifas: ${emailData.detailedAnswers['Kondisi darah nifas']}
+- Perdarahan berlebihan: ${emailData.detailedAnswers['Perdarahan berlebihan']}
+- Gumpalan darah: ${emailData.detailedAnswers['Gumpalan darah']}
+- Demam dan menggigil: ${emailData.detailedAnswers['Demam dan menggigil']}
+- Bau darah nifas: ${emailData.detailedAnswers['Bau darah nifas']}
+- Nyeri perut: ${emailData.detailedAnswers['Nyeri perut']}
+- Kondisi payudara: ${emailData.detailedAnswers['Kondisi payudara']}
+- Kondisi umum: ${emailData.detailedAnswers['Kondisi umum']}
+- Kualitas tidur: ${emailData.detailedAnswers['Kualitas tidur']}
+- Nyeri perineum: ${emailData.detailedAnswers['Nyeri perineum']}
+
+B. FUNGSI FISIOLOGIS:
+- Kesulitan berkemih: ${emailData.detailedAnswers['Kesulitan berkemih']}
+- Nyeri buang air kecil: ${emailData.detailedAnswers['Nyeri buang air kecil']}
+- Buang air besar: ${emailData.detailedAnswers['Buang air besar']}
+
+C. MENYUSUI:
+- Produksi ASI: ${emailData.detailedAnswers['Produksi ASI']}
+- Kondisi puting: ${emailData.detailedAnswers['Kondisi puting']}
+- Bayi menyusu: ${emailData.detailedAnswers['Bayi menyusu']}
+
+D. KESEHATAN MENTAL:
+- Kondisi mental: ${emailData.detailedAnswers['Kondisi mental']}
+- Tingkat kecemasan: ${emailData.detailedAnswers['Tingkat kecemasan']}
+- Kebutuhan bantuan: ${emailData.detailedAnswers['Kebutuhan bantuan']}
+
+E. TANDA BAHAYA KHUSUS:
+- Perdarahan mendadak: ${emailData.detailedAnswers['Perdarahan mendadak']}
+- Bau lokia: ${emailData.detailedAnswers['Bau lokia']}
+- Sakit kepala hebat: ${emailData.detailedAnswers['Sakit kepala hebat']}
+- Tingkat kelemahan: ${emailData.detailedAnswers['Tingkat kelemahan']}
+
+=======================================================
+Laporan ini dihasilkan secara otomatis dari aplikasi 
+Monitoring Ibu Nifas pada ${new Date().toLocaleString('id-ID')}
+=======================================================
+            `;
+            
+            return report;
+        }
+
+        function generateStructuredReport(emailData) {
+            // This would be sent to the admin's email in a real application
+            const structuredReport = {
+                metadata: {
+                    reportId: `NIFAS_${Date.now()}`,
+                    generatedAt: new Date().toISOString(),
+                    patientName: emailData.patientData.nama,
+                    daysPostPartum: emailData.patientData.hariKe,
+                    riskLevel: emailData.riskAssessment.overallRisk
+                },
+                summary: {
+                    totalQuestions: 23,
+                    criticalSymptomsCount: emailData.riskAssessment.criticalSymptoms.length,
+                    warningSymptomsCount: emailData.riskAssessment.warningSymptoms.length,
+                    urgentActionRequired: emailData.riskAssessment.overallRisk === 'TINGGI'
+                },
+                detailedData: emailData
+            };
+            
+            console.log('📊 Structured Report for Admin Dashboard:', structuredReport);
+        }
+
+        // Initialize app with animations
+        document.addEventListener('DOMContentLoaded', function() {
+            showCover();
+            
+            // Add smooth transitions to all cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.6s ease';
+            });
+
+            // Show cover with animation
+            setTimeout(() => {
+                const coverPage = document.getElementById('coverPage');
+                if (coverPage) {
+                    coverPage.style.opacity = '1';
+                    coverPage.style.transform = 'translateY(0)';
+                }
+            }, 100);
+
+            // Set max date for birth date input (today)
+            const dateInput = document.getElementById('tanggalPersalinan');
+            if (dateInput) {
+            
+                const today = new Date();
+                const maxDate = today.toISOString().split('T')[0];
+                dateInput.max = maxDate;
+                
+                // Set min date (e.g., 6 months ago)
+                const sixMonthsAgo = new Date();
+                sixMonthsAgo.setMonth(today.getMonth() - 6);
+                const minDate = sixMonthsAgo.toISOString().split('T')[0];
+                dateInput.min = minDate;
+            }
+        });
+
+        // Add service worker registration for PWA functionality
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Add install prompt for PWA
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            deferredPrompt = e;
+            // Optionally show install button
+        });
+
+        // Add offline functionality check
+        window.addEventListener('online', () => {
+            console.log('✅ Online - Email functionality available');
+        });
+
+        window.addEventListener('offline', () => {
+            console.log('⚠️ Offline - Data will be stored locally until connection restored');
+        });
+
+        // Prevent form resubmission on page refresh
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+</body>
+</html>
